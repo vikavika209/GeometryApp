@@ -12,7 +12,7 @@ public class GeometryApp {
         Rectangle rectangle = new Rectangle(8, 5);
         Triangle triangle = new Triangle(6, 7, 8);
 
-        printInfo("Круг", circle.getArea(), circle.getPerimeter());
+        printInfo("Круг", circle.getArea(), circle.getPerimeter(), circle.getDiameter());
         printInfo("Прямоугольник", rectangle.getArea(), rectangle.getPerimeter());
         printInfo("Треугольник", triangle.getArea(), triangle.getPerimeter());
     }
@@ -21,6 +21,14 @@ public class GeometryApp {
         System.out.println("Фигура: " + figure);
         System.out.printf("  Площадь: %.2f\n", area);
         System.out.printf("  Периметр: %.2f\n", perimeter);
+        System.out.println("----------------------------");
+    }
+
+    private static void printInfo(String figure, double area, double perimeter, double diameter) {
+        System.out.println("Фигура: " + figure);
+        System.out.printf("  Площадь: %.2f\n", area);
+        System.out.printf("  Периметр: %.2f\n", perimeter);
+        System.out.printf("  Диаметр: %.2f\n", diameter);
         System.out.println("----------------------------");
     }
 }
